@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -55,13 +56,25 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
+            label1.Location = new Point(44, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(173, 54);
+            label1.TabIndex = 1;
+            label1.Text = "NexGen";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(528, 399);
+            Controls.Add(label1);
             Controls.Add(panel1);
+            ForeColor = SystemColors.Highlight;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
@@ -70,11 +83,13 @@
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Panel panel1;
         private PictureBox pictureBox1;
+        private Label label1;
     }
 }
